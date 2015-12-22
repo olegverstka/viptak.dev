@@ -1,0 +1,180 @@
+@import "../bower/bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "_sprite.scss";
+@import "_fonts.scss";
+
+// Template style
+body {
+	font: 14px "calibri_light";
+}
+a:hover, a:active, a:focus {
+	outline: none;
+}
+h1 {
+	color: #0e74b8;
+	font: 38px "calibri_light";
+}
+.toggle_mnu {
+	background: none;
+	display: none;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	z-index: 100;
+	border: none;
+	right: 20px;
+	top: 5px;
+	outline: none;
+	span {
+    	display: block; 
+    }
+    .sandwich {
+		width: 28px;
+		height: 28px;
+		position: absolute;
+		top: 8px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 200;
+		&.active .sw-topper {
+			top: 9px;
+			-webkit-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		&.active .sw-bottom {
+			top: 6px;
+			-webkit-transform: rotate(45deg);
+			-ms-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+		&.active .sw-footer {
+			opacity: 0;
+			top: 0;
+			-webkit-transform: rotate(180deg);
+			-ms-transform: rotate(180deg);
+			transform: rotate(180deg);
+		}
+		.sw-topper {
+			position: relative;
+			top: 0;
+			width: 28px;
+			height: 3px;
+			background: white;
+			border: none;
+			border-radius: 4px 4px 4px 4px;
+			-webkit-transition: -webkit-transform 0.5s, top 0.2s;
+			transition: transform 0.5s, top 0.2s;
+			display: block; 
+		}
+		.sw-bottom {
+			position: relative;
+			width: 28px;
+			height: 3px;
+			top: 6.6px;
+			background: white;
+			border: none;
+			border-radius: 4px 4px 4px 4px;
+			-webkit-transition: -webkit-transform 0.5s, top 0.2s;
+			transition: transform 0.5s, top 0.2s;
+			-webkit-transition-delay: 0.2s, 0s;
+			transition-delay: 0.2s, 0s;
+		}
+		.sw-footer {
+			position: relative;
+			width: 28px;
+			height: 3px;
+			top: 13.5px;
+			background: white;
+			border: none;
+			border-radius: 4px 4px 4px 4px;
+			-webkit-transition: all 0.5s;
+			transition: all 0.5s;
+			-webkit-transition-delay: 0.1s;
+			transition-delay: 0.1s;
+		}
+	}
+}
+.header {
+	background: #00bcfc url("../img/bg-header.png") no-repeat scroll -163px 106px;
+	height: 139px;
+	padding: 0 0 34px;
+	p {
+		color: #fff;
+		font: 17px "calibri_light";
+		text-align: right;
+	}
+	.location {
+		margin: 5px 0 0;
+	}
+	.phone {
+		font: 32px "calibri_light";
+		margin: -2px 0 0;
+	}
+	.schedule {
+	    margin: -3px 0 7px;
+	}
+}
+.logo {
+    display: block;
+    height: 78px;
+    margin: 11px 0 0;
+    width: 103px;
+}
+.main-menu {
+	ul {
+		line-height: 105px;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			float: left;
+			margin: 0 5px 0 0;
+			a {
+				color: #fff;
+				font: 19px "calibri_light";
+				padding: 12px 10px;
+				text-decoration: none;
+				&:hover {
+					background: #84cbfa;
+					border-radius: 18px;
+					color: #fff;
+					font: 19px "calibri_light";
+					padding: 5px 10px;
+					text-decoration: none;
+				}
+			}
+			.active {
+				background: #fff;
+				border-radius: 18px;
+				color: #0e74b8;
+				font: 19px "calibri_light";
+				padding: 5px 10px;
+				text-decoration: none;
+			}
+		}
+	}
+}
+.call-back {
+	background: #86ccfb;
+	border-radius: 3px;
+	color: #fff;
+	float: right;
+	font: 17px "calibri_light";
+	padding: 7px 10px 7px 43px;
+	position: relative;
+	&:hover {
+		color: #fff;
+	}
+	i {
+		background: url("../img/ico_call_me.png") no-repeat;
+		display: block;
+		height: 32px;
+		left: 5px;
+		position: absolute;
+		bottom: 0;
+		width: 32px;
+	}
+}
+@import "_media.scss";
